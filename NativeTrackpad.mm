@@ -28,10 +28,6 @@ void orbit(/*Ptr<Point2D>& screenCoordinateCenter, */double deltaX, double delta
     app->activeViewport()->refresh();
 }
 
-Ptr<Vector3D> getViewportCameraUpVector() {
-    return app->activeViewport()->camera()->upVector();
-}
-
 Ptr<Vector3D> getViewportCameraRightVector() {
     auto camera = app->activeViewport()->camera();
     
@@ -75,7 +71,7 @@ void pan(double deltaX, double deltaY) {
     auto right = getViewportCameraRightVector();
     right->scaleBy(deltaX);
     
-    auto up = getViewportCameraUpVector();
+    auto up = app->activeViewport()->camera()->upVector();
     up->scaleBy(deltaY);
     
     right->add(up);
