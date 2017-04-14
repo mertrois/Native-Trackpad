@@ -87,7 +87,7 @@ void install() {
             return nil;
         }
         
-        if(event.modifierFlags & NSEventModifierFlagOption) {
+        if(event.modifierFlags == 0) {
             pan(event.scrollingDeltaX, event.scrollingDeltaY);
             return nil;
         }
