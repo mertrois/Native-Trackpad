@@ -64,7 +64,7 @@ Ptr<Vector3D> getViewportCameraRightVector() {
 
 double getViewportCameraTargetDistance() {
     auto camera = app->activeViewport()->camera();
-    return camera->eye()->distanceTo(camera->target());
+    return camera->eye()->distanceTo(camera->target()) + camera->viewExtents();
 }
 
 void panViewportCameraByVector(Ptr<Vector3D> vector) {
