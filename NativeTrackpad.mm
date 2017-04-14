@@ -16,6 +16,8 @@ Ptr<Application> app;
 Ptr<UserInterface> ui;
 
 void zoom(double magnification) {
+    // TODO zoom to mouse cursor
+    
     auto camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
     
@@ -37,6 +39,8 @@ void zoom(double magnification) {
 }
 
 void orbit(double deltaX, double deltaY) {
+    // TODO true orbit function
+    
     Ptr<Camera> camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
     
@@ -63,6 +67,8 @@ Ptr<Vector3D> getViewportCameraRightVector() {
 }
 
 double getViewportCameraTargetDistance() {
+    // TODO this is not true distance
+    
     auto camera = app->activeViewport()->camera();
     return camera->eye()->distanceTo(camera->target()) + camera->viewExtents();
 }
@@ -101,6 +107,8 @@ void pan(double deltaX, double deltaY) {
 }
 
 void install() {
+    // TODO handle only events to QTCanvas
+    
     NSEvent * (^handler)(NSEvent*);
     handler = ^NSEvent*(NSEvent* event) {
         if(event.modifierFlags & NSEventModifierFlagShift) {
