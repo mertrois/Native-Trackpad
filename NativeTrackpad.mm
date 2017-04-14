@@ -15,6 +15,27 @@ using namespace adsk::cam;
 Ptr<Application> app;
 Ptr<UserInterface> ui;
 
+void zoom(double magnification) {
+    auto camera = app->activeViewport()->camera();
+    camera->isSmoothTransition(false);
+    
+    auto viewExtents = camera->viewExtents();
+    
+    magnification *= -3;
+    
+    if(magnification > 0) {
+        viewExtents *= magnification + 1;
+    }
+    else {
+        viewExtents /= -magnification + 1;
+    }
+    
+    camera->viewExtents(viewExtents);
+    
+    app->activeViewport()->camera(camera);
+    app->activeViewport()->refresh();
+}
+
 void orbit(double deltaX, double deltaY) {
     Ptr<Camera> camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
@@ -95,6 +116,13 @@ void install() {
         return event;
     };
     [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskScrollWheel handler:handler];
+    
+    NSEvent * (^handlerMagnify)(NSEvent*);
+    handlerMagnify = ^NSEvent*(NSEvent* event) {
+        zoom(event.magnification);
+        return event;
+    };
+    [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskMagnify handler:handlerMagnify];
 }
 
 extern "C" XI_EXPORT bool run(const char* context) {
