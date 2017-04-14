@@ -108,12 +108,6 @@ extern "C" XI_EXPORT bool run(const char* context) {
     ui = app->userInterface();
     if (!ui) { return false; }
     
-    int i = 0;
-    while (i++ < -1) {
-        pan(1, 1);
-        nanosleep((const struct timespec[]){{0, 500000000L}}, NULL);
-    }
-    
     install();
     
     return true;
