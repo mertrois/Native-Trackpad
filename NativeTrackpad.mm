@@ -15,7 +15,7 @@ using namespace adsk::cam;
 Ptr<Application> app;
 Ptr<UserInterface> ui;
 
-void orbit(/*Ptr<Point2D>& screenCoordinateCenter, */double deltaX, double deltaY) {
+void orbit(double deltaX, double deltaY) {
     Ptr<Camera> camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
     
