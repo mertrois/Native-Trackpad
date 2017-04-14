@@ -45,6 +45,11 @@ Ptr<Vector3D> getViewportCameraRightVector() {
     return right;
 }
 
+double getViewportCameraTargetDistance() {
+    auto camera = app->activeViewport()->camera();
+    return camera->eye()->distanceTo(camera->target());
+}
+
 void panViewportCameraByVector(Ptr<Vector3D> vector) {
     auto camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
@@ -62,6 +67,11 @@ void panViewportCameraByVector(Ptr<Vector3D> vector) {
 }
 
 void pan(double deltaX, double deltaY) {
+    auto distance = getViewportCameraTargetDistance();
+    
+    deltaX = distance * deltaX / 10000 * -1;
+    deltaY = distance * deltaY / 10000;
+    
     auto right = getViewportCameraRightVector();
     right->scaleBy(deltaX);
     
