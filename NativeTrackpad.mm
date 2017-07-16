@@ -109,8 +109,7 @@ void pan(double deltaX, double deltaY) {
 void install() {
     // TODO handle only events to QTCanvas
     
-    NSEvent * (^handler)(NSEvent*);
-    handler = ^NSEvent*(NSEvent* event) {
+    auto handler = ^NSEvent*(NSEvent* event) {
         if(event.modifierFlags & NSEventModifierFlagShift) {
             orbit(event.scrollingDeltaX, event.scrollingDeltaY);
             return nil;
@@ -125,8 +124,7 @@ void install() {
     };
     [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskScrollWheel handler:handler];
     
-    NSEvent * (^handlerMagnify)(NSEvent*);
-    handlerMagnify = ^NSEvent*(NSEvent* event) {
+    auto handlerMagnify = ^NSEvent*(NSEvent* event) {
         zoom(event.magnification);
         return event;
     };
