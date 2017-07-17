@@ -114,6 +114,9 @@ void install() {
             return event;
         }
         
+        try { app->activeViewport(); }
+        catch (std::exception e) { return event; }
+        
 //        if(event.modifierFlags & NSEventModifierFlagShift) {
 //            orbit(event.scrollingDeltaX, event.scrollingDeltaY);
 //            return nil;
