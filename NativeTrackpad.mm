@@ -110,6 +110,10 @@ void install() {
     // TODO handle only events to QTCanvas
     
     auto handler = ^NSEvent*(NSEvent* event) {
+        if([event.window.title isNotEqualTo: @"Autodesk Fusion 360"]) {
+            return event;
+        }
+        
         if(event.modifierFlags & NSEventModifierFlagShift) {
             orbit(event.scrollingDeltaX, event.scrollingDeltaY);
             return nil;
@@ -125,6 +129,10 @@ void install() {
     [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskScrollWheel handler:handler];
     
     auto handlerMagnify = ^NSEvent*(NSEvent* event) {
+        if([event.window.title isNotEqualTo: @"Autodesk Fusion 360"]) {
+            return event;
+        }
+        
         zoom(event.magnification);
         return event;
     };
