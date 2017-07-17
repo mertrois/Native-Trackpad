@@ -122,7 +122,7 @@ void install() {
             return event;
         }
         
-        try { app->activeViewport(); }
+        try { app->activeViewport()->camera(); }
         catch (std::exception e) { return event; }
         
 //        if(event.modifierFlags & NSEventModifierFlagShift) {
