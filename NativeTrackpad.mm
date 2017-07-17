@@ -114,10 +114,10 @@ void install() {
             return event;
         }
         
-        if(event.modifierFlags & NSEventModifierFlagShift) {
-            orbit(event.scrollingDeltaX, event.scrollingDeltaY);
-            return nil;
-        }
+//        if(event.modifierFlags & NSEventModifierFlagShift) {
+//            orbit(event.scrollingDeltaX, event.scrollingDeltaY);
+//            return nil;
+//        }
         
         if(event.modifierFlags == 0) {
             pan(event.scrollingDeltaX, event.scrollingDeltaY);
