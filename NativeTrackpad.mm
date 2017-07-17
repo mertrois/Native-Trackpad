@@ -15,6 +15,8 @@ using namespace adsk::cam;
 Ptr<Application> app;
 Ptr<UserInterface> ui;
 
+
+// ZOOM
 void zoom(double magnification) {
     // TODO zoom to mouse cursor
     
@@ -38,6 +40,8 @@ void zoom(double magnification) {
     app->activeViewport()->refresh();
 }
 
+
+// ORBIT
 void orbit(double deltaX, double deltaY) {
     // TODO true orbit function
     
@@ -53,6 +57,8 @@ void orbit(double deltaX, double deltaY) {
     app->activeViewport()->refresh();
 }
 
+
+// PAN
 Ptr<Vector3D> getViewportCameraRightVector() {
     auto camera = app->activeViewport()->camera();
     
@@ -106,6 +112,8 @@ void pan(double deltaX, double deltaY) {
     panViewportCameraByVector(right);
 }
 
+
+// INSTALL
 void install() {
     // TODO handle only events to QTCanvas
     
