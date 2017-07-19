@@ -144,6 +144,9 @@ void install() {
             return event;
         }
         
+        try { app->activeViewport()->camera(); }
+        catch (std::exception e) { return event; }
+        
         zoom(event.magnification);
         return event;
     };
