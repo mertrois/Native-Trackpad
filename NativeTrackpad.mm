@@ -16,31 +16,6 @@ Ptr<Application> app;
 Ptr<UserInterface> ui;
 
 
-// ZOOM
-void zoom(double magnification) {
-    // TODO zoom to mouse cursor
-    
-    auto camera = app->activeViewport()->camera();
-    camera->isSmoothTransition(false);
-    
-    auto viewExtents = camera->viewExtents();
-    
-    magnification *= -3;
-    
-    if(magnification > 0) {
-        viewExtents *= magnification + 1;
-    }
-    else {
-        viewExtents /= -magnification + 1;
-    }
-    
-    camera->viewExtents(viewExtents);
-    
-    app->activeViewport()->camera(camera);
-    app->activeViewport()->refresh();
-}
-
-
 // PAN
 Ptr<Vector3D> getViewportCameraRightVector() {
     auto camera = app->activeViewport()->camera();
@@ -93,6 +68,31 @@ void pan(double deltaX, double deltaY) {
     right->add(up);
     
     panViewportCameraByVector(right);
+}
+
+
+// ZOOM
+void zoom(double magnification) {
+    // TODO zoom to mouse cursor
+    
+    auto camera = app->activeViewport()->camera();
+    camera->isSmoothTransition(false);
+    
+    auto viewExtents = camera->viewExtents();
+    
+    magnification *= -3;
+    
+    if(magnification > 0) {
+        viewExtents *= magnification + 1;
+    }
+    else {
+        viewExtents /= -magnification + 1;
+    }
+    
+    camera->viewExtents(viewExtents);
+    
+    app->activeViewport()->camera(camera);
+    app->activeViewport()->refresh();
 }
 
 
