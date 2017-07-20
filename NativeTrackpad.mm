@@ -27,13 +27,6 @@ Ptr<Vector3D> getViewportCameraRightVector() {
     return right;
 }
 
-double getViewportCameraTargetDistance() {
-    // TODO this is not true distance
-    
-    auto camera = app->activeViewport()->camera();
-    return camera->eye()->distanceTo(camera->target()) + camera->viewExtents();
-}
-
 void panViewportCameraByVector(Ptr<Vector3D> vector) {
     auto camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
@@ -51,10 +44,20 @@ void panViewportCameraByVector(Ptr<Vector3D> vector) {
 }
 
 void pan(double deltaX, double deltaY) {
-    auto distance = getViewportCameraTargetDistance();
+    auto camera = app->activeViewport()->camera();
     
-    deltaX = distance * deltaX / 10000 * -1;
-    deltaY = distance * deltaY / 10000;
+    if(camera->cameraType() == OrthographicCameraType) {
+        auto distance = sqrt(camera->viewExtents());
+        
+        deltaX *= distance / 1000 * -1;
+        deltaY *= distance / 1000;
+    }
+    else {
+        auto distance = camera->eye()->distanceTo(camera->target());
+        
+        deltaX *= distance / 1000 / 2 * -1;
+        deltaY *= distance / 1000 / 2;
+    }
     
     auto right = getViewportCameraRightVector();
     right->scaleBy(deltaX);
