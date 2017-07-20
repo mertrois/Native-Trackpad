@@ -117,8 +117,9 @@ Boolean eventHandler(NSEvent* event) {
         return true;
     }
     
-    try { app->activeViewport()->camera(); }
-    catch (std::exception e) { return true; }
+    if(!app->activeViewport()) {
+        return true;
+    }
     
     if(event.type == NSEventTypeGesture) {
         return false;
