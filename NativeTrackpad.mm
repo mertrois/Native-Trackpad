@@ -96,8 +96,9 @@ void pan(double deltaX, double deltaY) {
 }
 
 
-// HANDLE EVENT
-Boolean handleEvent(NSEvent* event) {
+// OUR EVENT HANDLER
+// return false to discard event
+Boolean eventHandler(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
     if(event.modifierFlags != 0) { return true; }
@@ -139,7 +140,7 @@ Boolean handleEvent(NSEvent* event) {
 #import <objc/runtime.h>
 @implementation NSApplication (Tracking)
 - (void)mySendEvent:(NSEvent *)event {
-    if(handleEvent(event)) {
+    if(eventHandler(event)) {
         [self mySendEvent:event];
     }
 }
