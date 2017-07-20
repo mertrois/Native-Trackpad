@@ -1,9 +1,6 @@
-
 #include <Core/CoreAll.h>
 #include <Fusion/FusionAll.h>
 #include <CAM/CAMAll.h>
-
-#include <math.h>
 
 #include <Foundation/Foundation.h>
 #include <Cocoa/Cocoa.h>
