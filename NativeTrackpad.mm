@@ -49,14 +49,14 @@ void pan(double deltaX, double deltaY) {
     if(camera->cameraType() == OrthographicCameraType) {
         auto distance = sqrt(camera->viewExtents());
         
-        deltaX *= distance / 1000 * -1;
-        deltaY *= distance / 1000;
+        deltaX *= distance / 500 * -1;
+        deltaY *= distance / 500;
     }
     else {
         auto distance = camera->eye()->distanceTo(camera->target());
         
-        deltaX *= distance / 1000 / 2 * -1;
-        deltaY *= distance / 1000 / 2;
+        deltaX *= distance / 2000 * -1;
+        deltaY *= distance / 2000;
     }
     
     auto right = getViewportCameraRightVector();
@@ -86,7 +86,7 @@ void zoom(double magnification) {
         auto eye = camera->eye();
         auto step = eye->vectorTo(camera->target());
         
-        step->scaleBy(magnification);
+        step->scaleBy(magnification * 0.75);
         
         eye->translateBy(step);
         camera->eye(eye);
