@@ -41,23 +41,6 @@ void zoom(double magnification) {
 }
 
 
-// ORBIT
-void orbit(double deltaX, double deltaY) {
-    // TODO true orbit function
-    
-    Ptr<Camera> camera = app->activeViewport()->camera();
-    camera->isSmoothTransition(false);
-    
-    Ptr<Point3D> eye = camera->eye();
-    eye->x(eye->x() + deltaX);
-    eye->y(eye->y() + deltaY);
-    camera->eye(eye);
-    
-    app->activeViewport()->camera(camera);
-    app->activeViewport()->refresh();
-}
-
-
 // PAN
 Ptr<Vector3D> getViewportCameraRightVector() {
     auto camera = app->activeViewport()->camera();
@@ -113,45 +96,62 @@ void pan(double deltaX, double deltaY) {
 }
 
 
-// INSTALL
-void install() {
+// HANDLE EVENT
+Boolean handleEvent(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
-    auto handler = ^NSEvent*(NSEvent* event) {
-        if([event.window.title isNotEqualTo: @"Autodesk Fusion 360"]) {
-            return event;
-        }
-        
-        try { app->activeViewport()->camera(); }
-        catch (std::exception e) { return event; }
-        
-//        if(event.modifierFlags & NSEventModifierFlagShift) {
-//            orbit(event.scrollingDeltaX, event.scrollingDeltaY);
-//            return nil;
-//        }
-        
-        if(event.modifierFlags == 0) {
-            pan(event.scrollingDeltaX, event.scrollingDeltaY);
-            return nil;
-        }
-        
-        return event;
-    };
-    [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskScrollWheel handler:handler];
+    if(event.modifierFlags != 0) { return true; }
     
-    auto handlerMagnify = ^NSEvent*(NSEvent* event) {
-        if([event.window.title isNotEqualTo: @"Autodesk Fusion 360"]) {
-            return event;
-        }
-        
-        try { app->activeViewport()->camera(); }
-        catch (std::exception e) { return event; }
-        
+    switch (event.type) {
+        case NSEventTypeScrollWheel:
+        case NSEventTypeMagnify:
+        case NSEventTypeGesture:
+            break;
+            
+        default:
+            return true;
+    }
+    
+    if([event.window.title isNotEqualTo: @"Autodesk Fusion 360"]) {
+        return true;
+    }
+    
+    try { app->activeViewport()->camera(); }
+    catch (std::exception e) { return true; }
+    
+    if(event.type == NSEventTypeGesture) {
+        return false;
+    }
+    else if(event.type == NSEventTypeScrollWheel) {
+        pan(event.scrollingDeltaX, event.scrollingDeltaY);
+        return false;
+    }
+    else if(event.type == NSEventTypeMagnify) {
         zoom(event.magnification);
-        return event;
-    };
-    [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskMagnify handler:handlerMagnify];
+        return false;
+    }
+    
+    return true;
 }
+
+
+// INSTALL
+#import <objc/runtime.h>
+@implementation NSApplication (Tracking)
+- (void)mySendEvent:(NSEvent *)event {
+    if(handleEvent(event)) {
+        [self mySendEvent:event];
+    }
+}
+
+- (void)nativeTrackpad {
+    Method original = class_getInstanceMethod([self class], @selector(sendEvent:));
+    Method swizzled = class_getInstanceMethod([self class], @selector(mySendEvent:));
+    
+    method_exchangeImplementations(original, swizzled);
+}
+@end
+
 
 extern "C" XI_EXPORT bool run(const char* context) {
     app = Application::get();
@@ -160,7 +160,7 @@ extern "C" XI_EXPORT bool run(const char* context) {
     ui = app->userInterface();
     if (!ui) { return false; }
     
-    install();
+    [NSApplication.sharedApplication nativeTrackpad];
     
     return true;
 }
