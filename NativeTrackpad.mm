@@ -78,18 +78,19 @@ void zoom(double magnification) {
     auto camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
     
-    auto viewExtents = camera->viewExtents();
-    
-    magnification *= -3;
-    
-    if(magnification > 0) {
-        viewExtents *= magnification + 1;
+    if(camera->cameraType() == OrthographicCameraType) {
+        auto viewExtents = camera->viewExtents();
+        camera->viewExtents(viewExtents + viewExtents * -magnification * 2);
     }
     else {
-        viewExtents /= -magnification + 1;
+        auto eye = camera->eye();
+        auto step = eye->vectorTo(camera->target());
+        
+        step->scaleBy(magnification);
+        
+        eye->translateBy(step);
+        camera->eye(eye);
     }
-    
-    camera->viewExtents(viewExtents);
     
     app->activeViewport()->camera(camera);
     app->activeViewport()->refresh();
