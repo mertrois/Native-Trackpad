@@ -86,7 +86,7 @@ void zoom(double magnification) {
         auto eye = camera->eye();
         auto step = eye->vectorTo(camera->target());
         
-        step->scaleBy(magnification * 0.75);
+        step->scaleBy(magnification * 0.9);
         
         eye->translateBy(step);
         camera->eye(eye);
