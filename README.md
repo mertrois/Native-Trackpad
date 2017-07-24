@@ -1,1 +1,1 @@
-https://fusion.pravdomil.cz
+https://fusion.pravdomil.com
