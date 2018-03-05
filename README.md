@@ -25,3 +25,9 @@ This is done by replacing Fusion’s gesture recognizer with macOS native recogn
 [**Go to Fusion 360 App Store →**](https://apps.autodesk.com/FUSION/en/Detail/Index?id=2223881439415941299)
 
 [**Donate**](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BCL2X3AFQBAP2&item_name=NativeTrackpad%20beer)
+
+# Alternative install
+
+[Download latest release](https://github.com/pravdomil/Native-Trackpad/releases/download/0.11/NativeTrackpad.zip), unzip and add unzipped folder to Fusion via Scripts and Add-ins.
+
+![manual install](install.png)
