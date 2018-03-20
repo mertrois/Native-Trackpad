@@ -2,27 +2,24 @@
 
 <h1 align="center">Native Trackpad Gestures<br/>for Autodesk Fusion 360</h1>
 <p align="center">Fix annoying gesture navigation in Fusion 360 on macOS.<br/>Tiny Add-in for Fusion 360.</p>
-<p align="center">
-  <a href="https://github.com/pravdomil/Native-Trackpad/search?q=todo">Todos</a>
-  -
-  <a href="https://github.com/pravdomil/Native-Trackpad/issues">Issues</a>
-  -
-  <a href="https://medium.com/@smenor/an-open-letter-to-the-next-ceo-of-autodesk-310c02dd5607#9844">Letter</a>
-  -
-  <a href="https://forums.autodesk.com/t5/ideastation-request-a-feature-or/use-native-trackpad-gesture-recognition-on-macos/idi-p/7018667">IdeaStation</a>
-</p>
 
 ## What it does?
 
 This add-in fixes two finger pan and pinch to zoom gestures where gestures are not being recognized or where they are slow. On top of that it adds inertia to two finger pan. This is done by replacing Fusion's gesture recognizer with macOS native recognizer.
-
-[**Play video**](https://www.youtube.com/watch?v=7M2McvpOL90)
 
 ## Features
 
 - Two finger pan with **inertia**
 - Pinch to zoom
 - Rotate view (shift + two finger)
+
+## More info
+
+- [**Play video**](https://www.youtube.com/watch?v=7M2McvpOL90)
+- [Todos](https://github.com/pravdomil/Native-Trackpad/search?q=todo)
+- [Issues](https://github.com/pravdomil/Native-Trackpad/issues)
+- [Letter](https://medium.com/@smenor/an-open-letter-to-the-next-ceo-of-autodesk-310c02dd5607#9844)
+- [IdeaStation](https://forums.autodesk.com/t5/ideastation-request-a-feature-or/use-native-trackpad-gesture-recognition-on-macos/idi-p/7018667)
 
 ## Download
 
