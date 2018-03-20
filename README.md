@@ -9,7 +9,7 @@ This add-in fixes two finger pan and pinch to zoom gestures where gestures are n
 
 ## Features
 
-- Two finger pan with **inertia**
+- Two finger pan **with inertia**
 - Pinch to zoom
 - Rotate view (shift + two finger)
 
