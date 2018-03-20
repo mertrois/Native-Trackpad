@@ -14,7 +14,7 @@
 
 ## What it does?
 
-It fixes two finger pan and pinch to zoom gestures where gestures are not being recognized or where they are slow. On top of it adds innertia to two finger pan.
+It fixes two finger pan and pinch to zoom gestures where gestures are not being recognized or where they are slow. On top of it adds innertia to two finger pan.
 
 This is done by replacing Fusion’s gesture recognizer with macOS native recognizer.
 
@@ -22,10 +22,9 @@ This is done by replacing Fusion’s gesture recognizer with macOS native recogn
 
 ## Features
 
-- Two finger pan
+- Two finger pan with **inertia**
 - Pinch to zoom
 - Rotate view (shift + two finger)
-- Inertial scrolling
 
 ## Download
 
