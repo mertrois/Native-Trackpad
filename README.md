@@ -20,15 +20,20 @@ This add-in fixes two finger pan and pinch to zoom gestures where gestures are n
 - [Issues](https://github.com/pravdomil/Native-Trackpad/issues)
 - [Letter](https://medium.com/@smenor/an-open-letter-to-the-next-ceo-of-autodesk-310c02dd5607#9844)
 - [IdeaStation](https://forums.autodesk.com/t5/ideastation-request-a-feature-or/use-native-trackpad-gesture-recognition-on-macos/idi-p/7018667)
+- [**Donate**](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BCL2X3AFQBAP2&item_name=NativeTrackpad%20beer)
 
-## Download
+## Install via App Store
 
 [**Go to Fusion 360 App Store →**](https://apps.autodesk.com/FUSION/en/Detail/Index?id=2223881439415941299)
 
-[**Donate**](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BCL2X3AFQBAP2&item_name=NativeTrackpad%20beer)
+## Manual install
 
-# Alternative install
+> Fusion App Store installer seems to be broken (is made and managed by Autodesk) but you can install add-in manually
 
-Fusion App Store installer seems to be broken (is made and managed by Autodesk), but you can install add-in manually.   [Download latest release](https://github.com/pravdomil/Native-Trackpad/releases/download/0.11/NativeTrackpad.zip), unzip and add unzipped folder to Fusion via Scripts and Add-ins.
+- [Download latest release](https://github.com/pravdomil/Native-Trackpad/releases/download/0.11/NativeTrackpad.zip)
+- Unzip
+- Go to Fusion → Scripts and Add-ins → Press green **+**
+- Select unzipped folder
+- Done!
 
 ![manual install](install.png)
