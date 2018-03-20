@@ -14,9 +14,7 @@
 
 ## What it does?
 
-This add-in fixes two finger pan and pinch to zoom gestures where gestures are not being recognized or where they are slow. On top of that it adds inertia to two finger pan.
-
-This is done by replacing Fusion’s gesture recognizer with macOS native recognizer.
+This add-in fixes two finger pan and pinch to zoom gestures where gestures are not being recognized or where they are slow. On top of that it adds inertia to two finger pan. This is done by replacing Fusion's gesture recognizer with macOS native recognizer.
 
 [**Play video**](https://www.youtube.com/watch?v=7M2McvpOL90)
 
