@@ -24,7 +24,9 @@ This add-in fixes two finger pan and pinch to zoom gestures where gestures are n
 
 ## App Store install
 
-[**Go to Fusion 360 App Store →**](https://apps.autodesk.com/FUSION/en/Detail/Index?id=2223881439415941299)
+- [Go to Fusion 360 App Store](https://apps.autodesk.com/FUSION/en/Detail/Index?id=2223881439415941299)
+- Press Download button on right side
+- Launch installer
 
 ## Manual install
 
