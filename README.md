@@ -28,7 +28,7 @@ This add-in fixes two finger pan and pinch to zoom gestures where gestures are n
 
 ## Manual install
 
-*Fusion App Store installer seems to be broken (is made and managed by Autodesk) but you can install add-in manually*
+*App Store installer can be broken (is made and managed by Autodesk) but you can install add-in manually*
 
 - [Download latest release](https://github.com/pravdomil/Native-Trackpad/releases/download/0.11/NativeTrackpad.zip)
 - Unzip
