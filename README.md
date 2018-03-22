@@ -13,6 +13,11 @@ This add-in fixes two finger pan and pinch to zoom gestures where gestures are n
 - Pinch to zoom
 - Rotate view (shift + two finger)
 
+## Know issues
+
+- You can't no longer scroll in Data panel, in order to scroll press and hold Command key
+- Navigation with perspective camera can become very slow in certain situations, switch to orthographic camera that's more reliable, you can check [code that causes this issue](https://github.com/pravdomil/Native-Trackpad/blob/563fc1f69e3eb2f6dbee136feb9e3b52e439e907/NativeTrackpad.mm#L56)
+
 ## More info
 
 - [**Play video**](https://www.youtube.com/watch?v=7M2McvpOL90)
