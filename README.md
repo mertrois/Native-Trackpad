@@ -1,7 +1,12 @@
-<p align="center"><img src="logo.png" width="256"/></p>
+<div align="center">
 
-<h1 align="center">Native Trackpad Gestures<br/>for Autodesk Fusion 360</h1>
-<p align="center">Fix annoying gesture navigation in Fusion 360 on macOS</p>
+<img src="logo.png" width="256"/>
+
+# Native Trackpad Gestures<br/>for Autodesk Fusion 360
+
+Fix annoying gesture navigation in Fusion 360 on macOS
+
+</div>
 
 ## What it does?
 
