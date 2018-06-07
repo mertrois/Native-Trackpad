@@ -5,6 +5,8 @@
 #include <Foundation/Foundation.h>
 #include <Cocoa/Cocoa.h>
 
+#import <objc/runtime.h>
+
 using namespace adsk::core;
 using namespace adsk::fusion;
 using namespace adsk::cam;
@@ -144,8 +146,6 @@ int howWeShouldHandleEvent(NSEvent* event) {
 }
 
 
-
-#import <objc/runtime.h>
 /**
  * Method swizzling here
  */
