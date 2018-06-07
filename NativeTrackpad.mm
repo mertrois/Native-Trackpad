@@ -114,11 +114,11 @@ int eventHandler(NSEvent* event) {
         return 0;
     }
     
-    if (![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
+    if (!app->activeViewport()) {
         return 0;
     }
     
-    if (!app->activeViewport()) {
+    if (![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
         return 0;
     }
     
