@@ -114,14 +114,8 @@ int eventHandler(NSEvent* event) {
         return 0;
     }
     
-    switch (event.type) {
-        case NSEventTypeScrollWheel:
-        case NSEventTypeMagnify:
-        case NSEventTypeGesture:
-            break;
-            
-        default:
-            return 0;
+    if (event.type != NSEventTypeScrollWheel && event.type != NSEventTypeMagnify && event.type != NSEventTypeGesture) {
+        return 0;
     }
     
     if (!app->activeViewport()) {
