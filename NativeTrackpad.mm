@@ -102,7 +102,9 @@ void zoom(double magnification) {
 Boolean eventHandler(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
-    if (event.modifierFlags != 0) { return true; }
+    if (event.modifierFlags != 0) {
+      return true;
+    }
     
     switch (event.type) {
         case NSEventTypeScrollWheel:
