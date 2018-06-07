@@ -107,7 +107,7 @@ int eventHandler(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
     if (event.modifierFlags != 0) {
-      return 0;
+        return 0;
     }
     
     switch (event.type) {
