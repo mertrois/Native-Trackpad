@@ -98,12 +98,11 @@ void zoom(double magnification) {
 
 
 // OUR EVENT HANDLER
-// return false to discard event
 int eventHandler(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
     if (event.modifierFlags != 0) {
-      return 1;
+      return 0;
     }
     
     switch (event.type) {
@@ -113,30 +112,30 @@ int eventHandler(NSEvent* event) {
             break;
             
         default:
-            return 1;
+            return 0;
     }
     
     if (![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
-        return 1;
+        return 0;
     }
     
     if (!app->activeViewport()) {
-        return 1;
+        return 0;
     }
     
     if (event.type == NSEventTypeGesture) {
-        return 0;
+        return 1;
     }
     else if (event.type == NSEventTypeScrollWheel) {
         pan(event.scrollingDeltaX, event.scrollingDeltaY);
-        return 0;
+        return 1;
     }
     else if (event.type == NSEventTypeMagnify) {
         zoom(event.magnification);
-        return 0;
+        return 1;
     }
     
-    return 1;
+    return 0;
 }
 
 
@@ -144,7 +143,7 @@ int eventHandler(NSEvent* event) {
 #import <objc/runtime.h>
 @implementation NSApplication (Tracking)
 - (void)mySendEvent:(NSEvent *)event {
-    if (eventHandler(event)) {
+    if (!eventHandler(event)) {
         [self mySendEvent:event];
     }
 }
