@@ -103,7 +103,7 @@ void zoom(double magnification) {
 //  1 = discard event
 //  2 = pan
 //  3 = zoom 
-int eventHandler(NSEvent* event) {
+int howWeShouldHandleEvent(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
     if (event.type != NSEventTypeScrollWheel && event.type != NSEventTypeMagnify && event.type != NSEventTypeGesture) {
@@ -140,7 +140,7 @@ int eventHandler(NSEvent* event) {
 #import <objc/runtime.h>
 @implementation NSApplication (Tracking)
 - (void)mySendEvent:(NSEvent *)event {
-    int result = eventHandler(event);
+    int result = howWeShouldHandleEvent(event);
     if (result == 0) {
         [self mySendEvent:event];
     } else if(result == 1) {
