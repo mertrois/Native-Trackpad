@@ -13,7 +13,9 @@ Ptr<Application> app;
 Ptr<UserInterface> ui;
 
 
-// PAN
+/**
+ * Helper function
+ */
 Ptr<Vector3D> getViewportCameraRightVector() {
     auto camera = app->activeViewport()->camera();
     
@@ -27,6 +29,9 @@ Ptr<Vector3D> getViewportCameraRightVector() {
     return right;
 }
 
+/**
+ * Helper function
+ */
 void panViewportCameraByVector(Ptr<Vector3D> vector) {
     auto camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
@@ -43,6 +48,9 @@ void panViewportCameraByVector(Ptr<Vector3D> vector) {
     app->activeViewport()->refresh();
 }
 
+/**
+ * Panning logic
+ */
 void pan(double deltaX, double deltaY) {
     auto camera = app->activeViewport()->camera();
     
@@ -71,7 +79,9 @@ void pan(double deltaX, double deltaY) {
 }
 
 
-// ZOOM
+/**
+ * Zoom logic
+ */
 void zoom(double magnification) {
     // TODO zoom to mouse cursor
     
@@ -96,13 +106,14 @@ void zoom(double magnification) {
     app->activeViewport()->refresh();
 }
 
-
-// OUR EVENT HANDLER
-// returns:
-//  0 = no change
-//  1 = discard event
-//  2 = pan
-//  3 = zoom 
+/**
+ * This function determines how we handle every event in app
+ * Returns:
+ * 0 = no change
+ * 1 = discard event
+ * 2 = pan
+ * 3 = zoom
+ */
 int howWeShouldHandleEvent(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
@@ -133,8 +144,11 @@ int howWeShouldHandleEvent(NSEvent* event) {
 }
 
 
-// INSTALL
+
 #import <objc/runtime.h>
+/**
+ * Method swizzling here
+ */
 @implementation NSApplication (Tracking)
 - (void)mySendEvent:(NSEvent *)event {
     int result = howWeShouldHandleEvent(event);
@@ -157,7 +171,9 @@ int howWeShouldHandleEvent(NSEvent* event) {
 }
 @end
 
-
+/**
+ * Main entry here
+ */
 extern "C" XI_EXPORT bool run(const char* context) {
     app = Application::get();
     if (!app) { return false; }
@@ -170,6 +186,9 @@ extern "C" XI_EXPORT bool run(const char* context) {
     return true;
 }
 
+/**
+ * Stop function not implemented
+ */
 extern "C" XI_EXPORT bool stop(const char* context) {
     return true;
 }
