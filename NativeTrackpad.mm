@@ -98,6 +98,11 @@ void zoom(double magnification) {
 
 
 // OUR EVENT HANDLER
+// returns:
+//  0 = no change
+//  1 = discard event
+//  2 = pan
+//  3 = zoom 
 int eventHandler(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
@@ -128,11 +133,11 @@ int eventHandler(NSEvent* event) {
     }
     else if (event.type == NSEventTypeScrollWheel) {
         pan(event.scrollingDeltaX, event.scrollingDeltaY);
-        return 1;
+        return 2;
     }
     else if (event.type == NSEventTypeMagnify) {
         zoom(event.magnification);
-        return 1;
+        return 3;
     }
     
     return 0;
