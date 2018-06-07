@@ -46,7 +46,7 @@ void panViewportCameraByVector(Ptr<Vector3D> vector) {
 void pan(double deltaX, double deltaY) {
     auto camera = app->activeViewport()->camera();
     
-    if(camera->cameraType() == OrthographicCameraType) {
+    if (camera->cameraType() == OrthographicCameraType) {
         auto distance = sqrt(camera->viewExtents());
         
         deltaX *= distance / 500 * -1;
@@ -78,7 +78,7 @@ void zoom(double magnification) {
     auto camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
     
-    if(camera->cameraType() == OrthographicCameraType) {
+    if (camera->cameraType() == OrthographicCameraType) {
         auto viewExtents = camera->viewExtents();
         camera->viewExtents(viewExtents + viewExtents * -magnification * 2);
     }
@@ -102,7 +102,7 @@ void zoom(double magnification) {
 Boolean eventHandler(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
-    if(event.modifierFlags != 0) { return true; }
+    if (event.modifierFlags != 0) { return true; }
     
     switch (event.type) {
         case NSEventTypeScrollWheel:
@@ -114,22 +114,22 @@ Boolean eventHandler(NSEvent* event) {
             return true;
     }
     
-    if(![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
+    if (![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
         return true;
     }
     
-    if(!app->activeViewport()) {
+    if (!app->activeViewport()) {
         return true;
     }
     
-    if(event.type == NSEventTypeGesture) {
+    if (event.type == NSEventTypeGesture) {
         return false;
     }
-    else if(event.type == NSEventTypeScrollWheel) {
+    else if (event.type == NSEventTypeScrollWheel) {
         pan(event.scrollingDeltaX, event.scrollingDeltaY);
         return false;
     }
-    else if(event.type == NSEventTypeMagnify) {
+    else if (event.type == NSEventTypeMagnify) {
         zoom(event.magnification);
         return false;
     }
@@ -142,7 +142,7 @@ Boolean eventHandler(NSEvent* event) {
 #import <objc/runtime.h>
 @implementation NSApplication (Tracking)
 - (void)mySendEvent:(NSEvent *)event {
-    if(eventHandler(event)) {
+    if (eventHandler(event)) {
         [self mySendEvent:event];
     }
 }
