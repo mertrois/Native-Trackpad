@@ -106,15 +106,15 @@ void zoom(double magnification) {
 int eventHandler(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
+    if (event.type != NSEventTypeScrollWheel && event.type != NSEventTypeMagnify && event.type != NSEventTypeGesture) {
+        return 0;
+    }
+    
     if (event.modifierFlags != 0) {
         return 0;
     }
     
     if (![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
-        return 0;
-    }
-    
-    if (event.type != NSEventTypeScrollWheel && event.type != NSEventTypeMagnify && event.type != NSEventTypeGesture) {
         return 0;
     }
     
