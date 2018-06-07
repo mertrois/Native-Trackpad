@@ -114,7 +114,7 @@ Boolean eventHandler(NSEvent* event) {
             return true;
     }
     
-    if([event.window.title isNotEqualTo: @"Autodesk Fusion 360"]) {
+    if(![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
         return true;
     }
     
