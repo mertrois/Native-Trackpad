@@ -144,7 +144,7 @@ int eventHandler(NSEvent* event) {
 @implementation NSApplication (Tracking)
 - (void)mySendEvent:(NSEvent *)event {
     int result = eventHandler(event)
-    if (!result) {
+    if (result == 0) {
         [self mySendEvent:event];
     }
 }
