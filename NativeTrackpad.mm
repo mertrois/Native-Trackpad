@@ -110,6 +110,10 @@ int eventHandler(NSEvent* event) {
         return 0;
     }
     
+    if (![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
+        return 0;
+    }
+    
     switch (event.type) {
         case NSEventTypeScrollWheel:
         case NSEventTypeMagnify:
@@ -118,10 +122,6 @@ int eventHandler(NSEvent* event) {
             
         default:
             return 0;
-    }
-    
-    if (![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
-        return 0;
     }
     
     if (!app->activeViewport()) {
