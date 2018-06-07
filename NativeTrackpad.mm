@@ -109,15 +109,12 @@ int howWeShouldHandleEvent(NSEvent* event) {
     if (event.type != NSEventTypeScrollWheel && event.type != NSEventTypeMagnify && event.type != NSEventTypeGesture) {
         return 0;
     }
-    
     if (event.modifierFlags != 0) {
         return 0;
     }
-    
     if (!app->activeViewport()) {
         return 0;
     }
-    
     if (![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
         return 0;
     }
