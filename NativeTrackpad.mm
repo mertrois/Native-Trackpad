@@ -132,11 +132,9 @@ int eventHandler(NSEvent* event) {
         return 1;
     }
     else if (event.type == NSEventTypeScrollWheel) {
-        pan(event.scrollingDeltaX, event.scrollingDeltaY);
         return 2;
     }
     else if (event.type == NSEventTypeMagnify) {
-        zoom(event.magnification);
         return 3;
     }
     
@@ -151,6 +149,12 @@ int eventHandler(NSEvent* event) {
     int result = eventHandler(event);
     if (result == 0) {
         [self mySendEvent:event];
+    } else if(result == 1) {
+        // noop
+    } else if(result == 2) {
+        pan(event.scrollingDeltaX, event.scrollingDeltaY);
+    } else if(result == 3) {
+        zoom(event.magnification);
     }
 }
 
