@@ -122,10 +122,10 @@ int howWeShouldHandleEvent(NSEvent* event) {
     if (event.type == NSEventTypeGesture) {
         return 1;
     }
-    else if (event.type == NSEventTypeScrollWheel) {
+    if (event.type == NSEventTypeScrollWheel) {
         return 2;
     }
-    else if (event.type == NSEventTypeMagnify) {
+    if (event.type == NSEventTypeMagnify) {
         return 3;
     }
     
