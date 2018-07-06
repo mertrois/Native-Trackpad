@@ -1,8 +1,8 @@
 {
-  "name": "fix-fusion-trackpad",
+  "name": "native-trackpad",
   "productName": "Fix Fusion Trackpad",
   "description": "Fix annoying gesture navigation in Fusion 360 on macOS",
-  "homepage": "https://fix-fusion-trackpad.pravdomil.com",
+  "homepage": "https://fusion.pravdomil.com",
   "keywords": [
     "applications"
   ],
