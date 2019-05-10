@@ -32,16 +32,7 @@ This add-in fixes two finger pan and pinch to zoom gestures where gestures are n
 - [IdeaStation](https://forums.autodesk.com/t5/ideastation-request-a-feature-or/use-native-trackpad-gesture-recognition-on-macos/idi-p/7018667)
 - [**Donate**](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BCL2X3AFQBAP2&item_name=NativeTrackpad%20beer)
 
-## App Store install
-
-- [Go to Fusion 360 App Store](https://apps.autodesk.com/FUSION/en/Detail/Index?id=2223881439415941299)
-- Press Download button on right side
-- Launch installer
-- Follow installer instructions
-
-## Manual install
-
-*App Store installer can be broken sometimes (is made and managed by Autodesk in India) but you can install add-in manually.*
+## How to Install
 
 - [Download latest release](https://github.com/pravdomil/Native-Trackpad/releases/download/0.12/NativeTrackpad.zip)
 - Unzip
