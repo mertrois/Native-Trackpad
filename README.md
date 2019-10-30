@@ -38,10 +38,7 @@ This add-in fixes two finger pan and pinch to zoom gestures where gestures are n
 - Unzip
 - Go to Fusion → Scripts and Add-ins → Press green **+**
 - Select unzipped folder
-- Done!
+- In Fusion make sure to turn on `Use gesture-based view navigation`. There is no special needs to configure your Trackpad in System Preferences. What I personaly do is set Tracking speed to maximum to have panning even faster.
 
 ![manual install](install.png)
 
-## Trackpad Configuration
-
-In Fusion make sure to turn on `Use gesture-based view navigation`. There is no special needs to configure your Trackpad in System Preferences. What I personaly do is set Tracking speed to maximum to have panning even faster.
