@@ -11,14 +11,14 @@ using namespace adsk::core;
 using namespace adsk::fusion;
 using namespace adsk::cam;
 
-Ptr<Application> app;
-Ptr<UserInterface> ui;
+adsk::core::Ptr<Application> app;
+adsk::core::Ptr<UserInterface> ui;
 
 
 /**
  * Helper function
  */
-Ptr<Vector3D> getViewportCameraRightVector() {
+adsk::core::Ptr<Vector3D> getViewportCameraRightVector() {
     auto camera = app->activeViewport()->camera();
     
     auto right = camera->upVector();
@@ -34,7 +34,7 @@ Ptr<Vector3D> getViewportCameraRightVector() {
 /**
  * Helper function
  */
-void panViewportCameraByVector(Ptr<Vector3D> vector) {
+void panViewportCameraByVector(adsk::core::Ptr<Vector3D> vector) {
     auto camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
     
@@ -109,17 +109,28 @@ void zoom(double magnification) {
 }
 
 /**
+ * Smart Magnify logic
+ */
+void smartMagnify() {
+     
+    adsk::core::Ptr<CommandDefinitions> cmdDefs = ui->commandDefinitions();
+    cmdDefs->itemById("FitCommand")->execute();
+    app->activeViewport()->refresh();
+}
+
+/**
  * This function determines how we handle every event in app
  * Returns:
  * 0 = no change
  * 1 = discard event
  * 2 = pan
  * 3 = zoom
+ * 4 = zoom to fit
  */
 int howWeShouldHandleEvent(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
-    if (event.type != NSEventTypeScrollWheel && event.type != NSEventTypeMagnify && event.type != NSEventTypeGesture) {
+    if (event.type != NSEventTypeScrollWheel && event.type != NSEventTypeMagnify && event.type != NSEventTypeGesture && event.type != NSEventTypeSmartMagnify) {
         return 0;
     }
     if (event.modifierFlags != 0) {
@@ -141,6 +152,9 @@ int howWeShouldHandleEvent(NSEvent* event) {
     if (event.type == NSEventTypeMagnify) {
         return 3;
     }
+    if (event.type == NSEventTypeSmartMagnify) {
+        return 4;
+    }
     
     return 0;
 }
@@ -160,6 +174,8 @@ int howWeShouldHandleEvent(NSEvent* event) {
         pan(event.scrollingDeltaX, event.scrollingDeltaY);
     } else if(result == 3) {
         zoom(event.magnification);
+    } else if(result == 4) {
+        smartMagnify();
     }
 }
 
