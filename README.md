@@ -23,6 +23,7 @@ native recognizer.
 
 ## Know Issues
 
+- works only in Fusion 360 downloaded from AppStore 
 - you can't no longer scroll in Data panel, in order to scroll press and hold Command key
 - navigation with perspective camera can become very slow in certain situations, switch to orthographic camera that's more reliable, you can check [code that causes this issue](https://github.com/pravdomil/Native-Trackpad/blob/563fc1f69e3eb2f6dbee136feb9e3b52e439e907/NativeTrackpad.mm#L56)
 
