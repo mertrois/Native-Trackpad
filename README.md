@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="logo.png" width="256"/>
+<img src="res/logo.png" width="256"/>
 
 # Native Trackpad Gestures<br/>for Autodesk Fusion 360
 
@@ -10,7 +10,10 @@ Fix annoying gesture navigation in Fusion 360 on macOS
 
 ## What it Does?
 
-This add-in fixes two finger pan and pinch to zoom gestures where gestures are not being recognized or where they are slow. On top of that it adds inertia to two finger pan. This is done by replacing Fusion's gesture recognizer with macOS native recognizer.
+This add-in fixes two finger pan and pinch to zoom gestures where gestures are
+not being recognized or where they are slow. On top of that it adds inertia to
+two finger pan. This is done by replacing Fusion's gesture recognizer with macOS
+native recognizer.
 
 ## Features
 
@@ -40,5 +43,5 @@ This add-in fixes two finger pan and pinch to zoom gestures where gestures are n
 - Select unzipped folder
 - In Fusion make sure to turn on `Use gesture-based view navigation`. There is no special needs to configure your Trackpad in System Preferences. What I personaly do is set Tracking speed to maximum to have panning even faster.
 
-![manual install](install.png)
+![manual install](res/install.png)
 
