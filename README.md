@@ -20,6 +20,7 @@ native recognizer.
 - Two finger pan **with inertia**
 - Pinch to zoom
 - Rotate view (shift + two finger)
+- Zoom to fit (double two finger tap)
 
 ## Know Issues
 
