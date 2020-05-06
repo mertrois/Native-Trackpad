@@ -109,12 +109,10 @@ void zoom(double magnification) {
 }
 
 /**
- * Smart Magnify logic
+ * Zoom to fit
  */
-void smartMagnify() {
-     
-    Ptr<CommandDefinitions> cmdDefs = ui->commandDefinitions();
-    cmdDefs->itemById("FitCommand")->execute();
+void zoomToFit() {
+    ui->commandDefinitions()->itemById("FitCommand")->execute();
     app->activeViewport()->refresh();
 }
 
@@ -175,7 +173,7 @@ int howWeShouldHandleEvent(NSEvent* event) {
     } else if(result == 3) {
         zoom(event.magnification);
     } else if(result == 4) {
-        smartMagnify();
+        zoomToFit();
     }
 }
 
