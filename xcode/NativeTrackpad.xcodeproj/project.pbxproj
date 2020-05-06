@@ -162,9 +162,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(USER_LIBRARY_DIR)/Containers/com.autodesk.mas.fusion360/Data/Library/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/include",
+					"$(USER_LIBRARY_DIR)/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/include",
 				);
-				LIBRARY_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/Containers/com.autodesk.mas.fusion360/Data/Library/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib";
+				LIBRARY_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -205,9 +205,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(USER_LIBRARY_DIR)/Containers/com.autodesk.mas.fusion360/Data/Library/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/include",
+					"$(USER_LIBRARY_DIR)/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/include",
 				);
-				LIBRARY_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/Containers/com.autodesk.mas.fusion360/Data/Library/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib";
+				LIBRARY_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				SDKROOT = macosx;
 			};
@@ -229,9 +229,9 @@
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_LDFLAGS = (
-					"$(USER_LIBRARY_DIR)/Containers/com.autodesk.mas.fusion360/Data/Library/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib/core.dylib",
-					"$(USER_LIBRARY_DIR)/Containers/com.autodesk.mas.fusion360/Data/Library/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib/fusion.dylib",
-					"$(USER_LIBRARY_DIR)/Containers/com.autodesk.mas.fusion360/Data/Library/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib/cam.dylib",
+					"$(USER_LIBRARY_DIR)/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib/core.dylib",
+					"$(USER_LIBRARY_DIR)/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib/fusion.dylib",
+					"$(USER_LIBRARY_DIR)/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib/cam.dylib",
 				);
 				PRELINK_LIBS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -255,9 +255,9 @@
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_LDFLAGS = (
-					"$(USER_LIBRARY_DIR)/Containers/com.autodesk.mas.fusion360/Data/Library/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib/core.dylib",
-					"$(USER_LIBRARY_DIR)/Containers/com.autodesk.mas.fusion360/Data/Library/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib/fusion.dylib",
-					"$(USER_LIBRARY_DIR)/Containers/com.autodesk.mas.fusion360/Data/Library/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib/cam.dylib",
+					"$(USER_LIBRARY_DIR)/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib/core.dylib",
+					"$(USER_LIBRARY_DIR)/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib/fusion.dylib",
+					"$(USER_LIBRARY_DIR)/Application\\ Support/Autodesk/Autodesk\\ Fusion\\ 360/API/CPP/lib/cam.dylib",
 				);
 				PRELINK_LIBS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
