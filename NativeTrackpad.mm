@@ -11,14 +11,14 @@ using namespace adsk::core;
 using namespace adsk::fusion;
 using namespace adsk::cam;
 
-adsk::core::Ptr<Application> app;
-adsk::core::Ptr<UserInterface> ui;
+Ptr<Application> app;
+Ptr<UserInterface> ui;
 
 
 /**
  * Helper function
  */
-adsk::core::Ptr<Vector3D> getViewportCameraRightVector() {
+Ptr<Vector3D> getViewportCameraRightVector() {
     auto camera = app->activeViewport()->camera();
     
     auto right = camera->upVector();
@@ -34,7 +34,7 @@ adsk::core::Ptr<Vector3D> getViewportCameraRightVector() {
 /**
  * Helper function
  */
-void panViewportCameraByVector(adsk::core::Ptr<Vector3D> vector) {
+void panViewportCameraByVector(Ptr<Vector3D> vector) {
     auto camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
     
@@ -113,7 +113,7 @@ void zoom(double magnification) {
  */
 void smartMagnify() {
      
-    adsk::core::Ptr<CommandDefinitions> cmdDefs = ui->commandDefinitions();
+    Ptr<CommandDefinitions> cmdDefs = ui->commandDefinitions();
     cmdDefs->itemById("FitCommand")->execute();
     app->activeViewport()->refresh();
 }
