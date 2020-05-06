@@ -1,4 +1,4 @@
-/NativeTrackpad.build
-/NativeTrackpad.dylib
-/NativeTrackpad.xcodeproj/project.xcworkspace/xcuserdata
-/NativeTrackpad.xcodeproj/xcuserdata
+/xcode/build
+/xcode/NativeTrackpad.build
+/xcode/NativeTrackpad.xcodeproj/project.xcworkspace
+/xcode/NativeTrackpad.xcodeproj/xcuserdata
