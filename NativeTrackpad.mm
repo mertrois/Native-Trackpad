@@ -109,17 +109,26 @@ void zoom(double magnification) {
 }
 
 /**
+ * Zoom to fit
+ */
+void zoomToFit() {
+    ui->commandDefinitions()->itemById("FitCommand")->execute();
+    app->activeViewport()->refresh();
+}
+
+/**
  * This function determines how we handle every event in app
  * Returns:
  * 0 = no change
  * 1 = discard event
  * 2 = pan
  * 3 = zoom
+ * 4 = zoom to fit
  */
 int howWeShouldHandleEvent(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
-    if (event.type != NSEventTypeScrollWheel && event.type != NSEventTypeMagnify && event.type != NSEventTypeGesture) {
+    if (event.type != NSEventTypeScrollWheel && event.type != NSEventTypeMagnify && event.type != NSEventTypeGesture && event.type != NSEventTypeSmartMagnify) {
         return 0;
     }
     if (event.modifierFlags != 0) {
@@ -141,6 +150,9 @@ int howWeShouldHandleEvent(NSEvent* event) {
     if (event.type == NSEventTypeMagnify) {
         return 3;
     }
+    if (event.type == NSEventTypeSmartMagnify) {
+        return 4;
+    }
     
     return 0;
 }
@@ -160,6 +172,8 @@ int howWeShouldHandleEvent(NSEvent* event) {
         pan(event.scrollingDeltaX, event.scrollingDeltaY);
     } else if(result == 3) {
         zoom(event.magnification);
+    } else if(result == 4) {
+        zoomToFit();
     }
 }
 
