@@ -1,6 +1,6 @@
 <div align="center">
 
-**Looking for maintainers!**
+**Looking for maintainers of this repository!**
 
 <img src="res/logo.png" width="256"/>
 
