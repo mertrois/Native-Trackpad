@@ -1,5 +1,7 @@
 <div align="center">
 
+**Looking for maintainers!**
+
 <img src="res/logo.png" width="256"/>
 
 # Native Trackpad Gestures<br/>for Autodesk Fusion 360
