@@ -4,7 +4,7 @@
 
 # Native Trackpad Gestures<br/>for Autodesk Fusion 360
 
-Fix annoying gesture navigation in Fusion 360 on macOS
+Fix annoying gesture navigation in Fusion 360 on macOS.
 
 </div>
 
