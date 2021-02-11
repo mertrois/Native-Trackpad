@@ -17,7 +17,7 @@ Replacing Fusion's gesture recognizer with macOS native recognizer.
 
 - Changes two finger pan gesture and adds inertia.
 - Changes pinch to zoom gesture.
-- Rotate view is shift + two finger.
+- Rotate is shift + two finger.
 - Zoom to fit is double two finger tap.
 - You can't no longer scroll in Data panel, in order to scroll hold Command key.
 - Navigation with perspective camera can be very slow in certain situations,
