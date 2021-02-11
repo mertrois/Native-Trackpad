@@ -8,8 +8,7 @@
 
 # Native Trackpad Gestures<br/>for Autodesk Fusion 360
 
-Changes trackpad gestures in Autodesk Fusion 360 on macOS.
-
+Changes trackpad gestures in Autodesk Fusion 360 on macOS.  
 Replacing Fusion's gesture recognizer with macOS native recognizer.
 
 </div>
