@@ -21,7 +21,7 @@ Replacing Fusion's gesture recognizer with macOS native recognizer.
 - Zoom to fit is double two finger tap.
 - You can't no longer scroll in Data panel, in order to scroll hold Command key.
 - Navigation with perspective camera can be very slow in certain situations,
-  using orthographic camera fixes this issue.  
+  using orthographic camera fixes this issue.
   [Code that causes this issue](https://github.com/pravdomil/Native-Trackpad/blob/563fc1f69e3eb2f6dbee136feb9e3b52e439e907/NativeTrackpad.mm#L56)
   .
 
