@@ -1,6 +1,6 @@
 <div align="center">
 
-**[Look at issues first](https://github.com/pravdomil/Native-Trackpad/issues).**
+**[Look at common issues first](https://github.com/pravdomil/Native-Trackpad/issues).**
 
 **Looking for maintainers of this repository!**
 
