@@ -1,6 +1,6 @@
 <div align="center">
 
-**Plugin seems to be broken.**
+**[Plugin seems to be broken](https://forums.autodesk.com/t5/fusion-360-support/mac-orbit-using-trackpad-no-longer-working/m-p/10014451#M110912).**
 
 **Looking for maintainers of this repository!**
 
