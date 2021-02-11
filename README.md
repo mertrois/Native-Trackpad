@@ -36,7 +36,7 @@ Replacing Fusion's gesture recognizer with macOS native recognizer.
 
 - [Download latest release](https://github.com/pravdomil/Native-Trackpad/releases/download/0.12/NativeTrackpad.zip).
 - Unzip.
-- Go to Fusion → Scripts and Add-ins → Press green **+**.
+- Go to: Tools → Add-ins → Add-ins → Click ➕.
 - Select unzipped folder.
 - In Fusion make sure to turn on `Use gesture-based view navigation` (which is the default).
 
