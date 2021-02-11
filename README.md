@@ -1,5 +1,7 @@
 <div align="center">
 
+**[Look at issues first](https://github.com/pravdomil/Native-Trackpad/issues).**
+
 **Looking for maintainers of this repository!**
 
 <img src="res/logo.png" width="256"/>
