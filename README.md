@@ -2,8 +2,6 @@
 
 **[Look at common issues first](https://github.com/pravdomil/Native-Trackpad/issues).**
 
-**Looking for maintainers of this repository!**
-
 <img src="res/logo.png" width="256"/>
 
 # Native Trackpad Gestures<br/>for Autodesk Fusion 360
