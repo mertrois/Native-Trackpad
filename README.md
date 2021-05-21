@@ -1,6 +1,6 @@
 <div align="center">
 
-**[Look at common issues first](https://github.com/pravdomil/Native-Trackpad/issues).**
+**[Look at common issues first](https://github.com/luclefleur/Native-Trackpad/issues).**
 
 <img src="res/logo.png" width="256"/>
 
@@ -20,19 +20,19 @@ Replacing Fusion's gesture recognizer with macOS native recognizer.
 - You can't no longer scroll in Data panel, in order to scroll hold Command key.
 - Navigation with perspective camera can be very slow in certain situations,
   using orthographic camera fixes this issue.
-  [Code that causes this issue](https://github.com/pravdomil/Native-Trackpad/blob/563fc1f69e3eb2f6dbee136feb9e3b52e439e907/NativeTrackpad.mm#L56).
+  [Code that causes this issue](https://github.com/luclefleur/Native-Trackpad/blob/563fc1f69e3eb2f6dbee136feb9e3b52e439e907/NativeTrackpad.mm#L56).
 
 ## Links
 
 - [**How to video**](https://www.youtube.com/watch?v=7M2McvpOL90).
-- [Todos](https://github.com/pravdomil/Native-Trackpad/search?q=todo).
-- [Issues](https://github.com/pravdomil/Native-Trackpad/issues).
+- [Todos](https://github.com/luclefleur/Native-Trackpad/search?q=todo).
+- [Issues](https://github.com/luclefleur/Native-Trackpad/issues).
 - [IdeaStation](https://forums.autodesk.com/t5/ideastation-request-a-feature-or/use-native-trackpad-gesture-recognition-on-macos/idi-p/7018667).
 - [**Donate**](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BCL2X3AFQBAP2&item_name=NativeTrackpad%20beer).
 
 ## Installation
 
-- [Download latest release](https://github.com/pravdomil/Native-Trackpad/releases/download/0.12/NativeTrackpad.zip).
+- [Download latest release](https://github.com/luclefleur/Native-Trackpad/releases/download/0.12/NativeTrackpad.zip).
 - Unzip.
 - Go to: Tools → Add-ins → Add-ins → Click ➕.
 - Select unzipped folder.
