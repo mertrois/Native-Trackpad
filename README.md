@@ -24,11 +24,9 @@ Replacing Fusion's gesture recognizer with macOS native recognizer.
 
 ## Links
 
-- [**How to video**](https://www.youtube.com/watch?v=7M2McvpOL90).
 - [Todos](https://github.com/luclefleur/Native-Trackpad/search?q=todo).
 - [Issues](https://github.com/luclefleur/Native-Trackpad/issues).
 - [IdeaStation](https://forums.autodesk.com/t5/ideastation-request-a-feature-or/use-native-trackpad-gesture-recognition-on-macos/idi-p/7018667).
-- [**Donate**](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BCL2X3AFQBAP2&item_name=NativeTrackpad%20beer).
 
 ## Installation
 
