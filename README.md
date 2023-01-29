@@ -40,3 +40,30 @@ There is no special needs to configure your Trackpad in System Preferences.
 What I personaly do is set Tracking speed to maximum to have panning even faster.
 
 ![manual install](res/install.png)
+
+## Development
+
+1. Build the add-in in xcode
+2. Add the add-in at `<repo>/xcode/` to fusion360
+3. The add-in dylib isn't automatically reloaded, so changes require restarting
+   fusion360.
+4. To enable debugging fusion360 with xcode debugger, you need to strip the
+   hardened runtime code signature from the app. The actual fusion360 app that
+   is codesigned is located in a non-standard directory.
+
+  To check code signature:
+   ```
+   codesign -d -vvv ~/Library/ApplicationSupport/Autodesk/webdeploy/production/Autodesk\ Fusion\ 360.app
+   ```
+
+  To remove code signature:
+   ```
+   sudo codesign --remove-signature ~/Library/ApplicationSupport/Autodesk/webdeploy/production/Autodesk\ Fusion\ 360.app
+   ```
+
+5. Log values like so:
+
+  ```
+  std::string str = "TARGET: x: " + std::to_string(target->x()) + " y: " + std::to_string(target->y()) + " z: " + std::to_string(target->z());
+  adsk::core::Application::log(str);
+  ```

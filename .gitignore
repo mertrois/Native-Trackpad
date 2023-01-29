@@ -2,3 +2,5 @@
 /xcode/NativeTrackpad.build
 /xcode/NativeTrackpad.xcodeproj/project.xcworkspace
 /xcode/NativeTrackpad.xcodeproj/xcuserdata
+/xcode/NativeTrackpad.dylib
+/xcode/NativeTrackpad.xcodeproj/xcshareddata
