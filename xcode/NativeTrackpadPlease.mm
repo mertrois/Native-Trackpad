@@ -59,8 +59,8 @@ void pan(double deltaX, double deltaY) {
     if (camera->cameraType() == OrthographicCameraType) {
         auto distance = sqrt(camera->viewExtents());
         
-        deltaX *= distance / 500 * -1;
-        deltaY *= distance / 500;
+        deltaX *= distance / 250 * -1;
+        deltaY *= distance / 250;
     }
     else {
         auto distance = camera->eye()->distanceTo(camera->target());
