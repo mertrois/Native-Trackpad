@@ -19,12 +19,6 @@
   [Code that causes this issue](https://github.com/luclefleur/Native-Trackpad/blob/563fc1f69e3eb2f6dbee136feb9e3b52e439e907/NativeTrackpad.mm#L56).
 - [Common issues](https://github.com/luclefleur/Native-Trackpad/issues).
 
-## Links
-
-- [Todos](https://github.com/luclefleur/Native-Trackpad/search?q=todo).
-- [Issues](https://github.com/luclefleur/Native-Trackpad/issues).
-- [IdeaStation](https://forums.autodesk.com/t5/ideastation-request-a-feature-or/use-native-trackpad-gesture-recognition-on-macos/idi-p/7018667).
-
 ## Installation
 
 - [Download latest release](https://github.com/luclefleur/Native-Trackpad/releases/download/0.14/NativeTrackpad.zip).
@@ -37,3 +31,9 @@ There is no special needs to configure your Trackpad in System Preferences.
 What I personally do is set Tracking speed to maximum to have panning even faster.
 
 ![manual install](res/install.png)
+
+## Links
+
+- [Todos](https://github.com/luclefleur/Native-Trackpad/search?q=todo).
+- [Issues](https://github.com/luclefleur/Native-Trackpad/issues).
+- [IdeaStation](https://forums.autodesk.com/t5/ideastation-request-a-feature-or/use-native-trackpad-gesture-recognition-on-macos/idi-p/7018667).
