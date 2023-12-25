@@ -32,7 +32,7 @@ What I personally do is set Tracking speed to maximum to have panning even faste
 
 ![manual install](res/install.png)
 
-## Links
+## Se Also
 
 - [Todos](https://github.com/luclefleur/Native-Trackpad/search?q=todo).
 - [Issues](https://github.com/luclefleur/Native-Trackpad/issues).
