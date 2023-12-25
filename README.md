@@ -9,7 +9,7 @@
 - **Pan** - slide with two fingers
 - **Zoom** - pinch with two fingers
 - **Rotate** - shift + slide with two fingers
-- **Zoom to fit** - double tap with two fingers
+- **Zoom to Fit** - double tap with two fingers
 
 ## Be Aware
 
