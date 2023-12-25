@@ -19,7 +19,7 @@
   Orthographic camera fixes that!
 - [Common issues](https://github.com/luclefleur/Native-Trackpad/issues)!
 
-## Installation
+## Install
 
 - [Download](https://github.com/luclefleur/Native-Trackpad/releases/download/0.14/NativeTrackpad.zip).
 - Unzip.
