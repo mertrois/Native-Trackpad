@@ -8,7 +8,7 @@
   "supportedOS": "mac",
   "editEnabled": true,
   "id": "a4597288-1620-4f08-9f0f-1b349b92d841",
-  "version": "0.13",
+  "version": "0.14",
   "runOnStartup": true,
   "sourcemac": "NativeTrackpad.xcodeproj"
 }
