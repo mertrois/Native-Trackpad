@@ -32,6 +32,6 @@
 
 ## Se Also
 
-- [Todos](https://github.com/luclefleur/Native-Trackpad/search?q=todo).
-- [Issues](https://github.com/luclefleur/Native-Trackpad/issues).
-- [IdeaStation](https://forums.autodesk.com/t5/ideastation-request-a-feature-or/use-native-trackpad-gesture-recognition-on-macos/idi-p/7018667).
+- [Todos](https://github.com/luclefleur/Native-Trackpad/search?q=todo)
+- [Issues](https://github.com/luclefleur/Native-Trackpad/issues)
+- [IdeaStation](https://forums.autodesk.com/t5/ideastation-request-a-feature-or/use-native-trackpad-gesture-recognition-on-macos/idi-p/7018667)
