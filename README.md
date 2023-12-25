@@ -15,8 +15,8 @@
 
 - You can't no longer scroll in Data panel and other few places!  
   If you are stucked scrolling hold Command key!
-- Navigation with perspective camera can be very slow in certain situations,
-  using orthographic camera fixes this issue!  
+- Navigation with perspective camera can be very slow in certain situations!  
+  Orthographic camera fixes that!
 - [Common issues](https://github.com/luclefleur/Native-Trackpad/issues)!
 
 ## Installation
