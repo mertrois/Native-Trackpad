@@ -50,6 +50,39 @@ void panViewportCameraByVector(adsk::core::Ptr<Vector3D> vector) {
     app->activeViewport()->refresh();
 }
 
+void orbit(double deltaX, double deltaY) {
+    auto camera = app->activeViewport()->camera();
+    camera->isSmoothTransition(false);
+
+    deltaX = deltaX / 100 * -1;
+    deltaY = deltaY / 100 * -1;
+
+    auto up = camera->upVector();
+    up->normalize();
+    auto right = getViewportCameraRightVector();
+    right->normalize();
+
+    auto target = camera->target();
+    auto eyeToTarget = target->vectorTo(camera->eye());
+
+    auto origin = Point3D::create();
+
+    auto rotation = adsk::core::Matrix3D::create();
+    rotation->setToRotation(deltaX, up, origin);
+    eyeToTarget->transformBy(rotation);
+
+    rotation->setToRotation(deltaY, right, origin);
+    eyeToTarget->transformBy(rotation);
+
+    // TODO(ibash) handle isOk is false
+    auto isOk = eyeToTarget->add(target->asVector());
+
+    camera->eye(eyeToTarget->asPoint());
+
+    app->activeViewport()->camera(camera);
+    app->activeViewport()->refresh();
+}
+
 /**
  * Panning logic
  */
