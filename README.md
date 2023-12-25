@@ -23,7 +23,7 @@
 
 ## Install
 
-- [Download](https://github.com/luclefleur/Native-Trackpad/releases/download/0.15/NativeTrackpad.zip).
+- [Download](https://github.com/luclefleur/Native-Trackpad/releases/download/0.15/NativeTrackpadPlease.zip).
 - Unzip.
 - Go to: Tools → Add-ins → Add-ins → Click ➕.
 - Select unzipped folder.
