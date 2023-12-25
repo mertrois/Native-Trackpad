@@ -17,10 +17,10 @@
 - Navigation with perspective camera can be very slow in certain situations,
   using orthographic camera fixes this issue.
   [Code that causes this issue](https://github.com/luclefleur/Native-Trackpad/blob/563fc1f69e3eb2f6dbee136feb9e3b52e439e907/NativeTrackpad.mm#L56).
+- [Common issues](https://github.com/luclefleur/Native-Trackpad/issues).
 
 ## Links
 
-- **[Common Issues](https://github.com/luclefleur/Native-Trackpad/issues)**
 - [Todos](https://github.com/luclefleur/Native-Trackpad/search?q=todo).
 - [Issues](https://github.com/luclefleur/Native-Trackpad/issues).
 - [IdeaStation](https://forums.autodesk.com/t5/ideastation-request-a-feature-or/use-native-trackpad-gesture-recognition-on-macos/idi-p/7018667).
