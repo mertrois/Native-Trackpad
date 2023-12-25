@@ -168,10 +168,10 @@ int howWeShouldHandleEvent(NSEvent* event) {
  * Method swizzling here
  */
 @implementation NSApplication (Tracking)
-- (void)mySendEvent:(NSEvent *)event {
+- (void)mySendEvent2:(NSEvent *)event {
     int result = howWeShouldHandleEvent(event);
     if (result == 0) {
-        [self mySendEvent:event];
+        [self mySendEvent2:event];
     } else if(result == 1) {
         // noop
     } else if(result == 2) {
@@ -185,7 +185,7 @@ int howWeShouldHandleEvent(NSEvent* event) {
 
 - (void)nativeTrackpad {
     Method original = class_getInstanceMethod([self class], @selector(sendEvent:));
-    Method swizzled = class_getInstanceMethod([self class], @selector(mySendEvent:));
+    Method swizzled = class_getInstanceMethod([self class], @selector(mySendEvent2:));
     
     method_exchangeImplementations(original, swizzled);
 }
