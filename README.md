@@ -11,6 +11,8 @@
 - **Rotate** - shift + slide with two fingers
 - **Zoom to fit** - double tap with two fingers
 
+## Be Aware
+
 - You can't no longer scroll in Data panel, in order to scroll hold Command key.
 - Navigation with perspective camera can be very slow in certain situations,
   using orthographic camera fixes this issue.
