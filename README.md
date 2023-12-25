@@ -2,7 +2,7 @@
 
 <img src="res/logo.png" alt="Native Trackpad" width="256"/>
 
-# Native Trackpad Gestures<br/>for Autodesk Fusion 360
+# Native Trackpad Gestures<br/>for Add-In for Autodesk Fusion 360
 
 </div>
 
