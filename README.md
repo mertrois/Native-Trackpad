@@ -25,10 +25,7 @@
 - Unzip.
 - Go to: Tools → Add-ins → Add-ins → Click ➕.
 - Select unzipped folder.
-- In Fusion make sure to turn on `Use gesture-based view navigation` (which is the default).
-
-There is no special needs to configure your Trackpad in System Preferences.
-What I personally do is set Tracking speed to maximum to have panning even faster.
+- In Fusion settings make sure to turn off `Use gesture-based view navigation`!
 
 ![manual install](res/install.png)
 
