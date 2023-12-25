@@ -20,14 +20,14 @@ adsk::core::Ptr<UserInterface> ui;
  */
 adsk::core::Ptr<Vector3D> getViewportCameraRightVector() {
     auto camera = app->activeViewport()->camera();
-    
+
     auto right = camera->upVector();
-    
+
     auto rotation = Matrix3D::create();
     auto axis = camera->eye()->vectorTo(camera->target());
     rotation->setToRotation(M_PI / 2, axis, Point3D::create(0, 0, 0));
     right->transformBy(rotation);
-    
+
     return right;
 }
 
@@ -37,15 +37,15 @@ adsk::core::Ptr<Vector3D> getViewportCameraRightVector() {
 void panViewportCameraByVector(adsk::core::Ptr<Vector3D> vector) {
     auto camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
-    
+
     auto eye = camera->eye();
     eye->translateBy(vector);
     camera->eye(eye);
-    
+
     auto target = camera->target();
     target->translateBy(vector);
     camera->target(target);
-    
+
     app->activeViewport()->camera(camera);
     app->activeViewport()->refresh();
 }
@@ -55,28 +55,28 @@ void panViewportCameraByVector(adsk::core::Ptr<Vector3D> vector) {
  */
 void pan(double deltaX, double deltaY) {
     auto camera = app->activeViewport()->camera();
-    
+
     if (camera->cameraType() == OrthographicCameraType) {
         auto distance = sqrt(camera->viewExtents());
-        
+
         deltaX *= distance / 250 * -1;
         deltaY *= distance / 250;
     }
     else {
         auto distance = camera->eye()->distanceTo(camera->target());
-        
+
         deltaX *= distance / 2000 * -1;
         deltaY *= distance / 2000;
     }
-    
+
     auto right = getViewportCameraRightVector();
     right->scaleBy(deltaX);
-    
+
     auto up = app->activeViewport()->camera()->upVector();
     up->scaleBy(deltaY);
-    
+
     right->add(up);
-    
+
     panViewportCameraByVector(right);
 }
 
@@ -86,10 +86,10 @@ void pan(double deltaX, double deltaY) {
  */
 void zoom(double magnification) {
     // TODO zoom to mouse cursor
-    
+
     auto camera = app->activeViewport()->camera();
     camera->isSmoothTransition(false);
-    
+
     if (camera->cameraType() == OrthographicCameraType) {
         auto viewExtents = camera->viewExtents();
         camera->viewExtents(viewExtents + viewExtents * -magnification * 2);
@@ -97,13 +97,13 @@ void zoom(double magnification) {
     else {
         auto eye = camera->eye();
         auto step = eye->vectorTo(camera->target());
-        
+
         step->scaleBy(magnification * 0.9);
-        
+
         eye->translateBy(step);
         camera->eye(eye);
     }
-    
+
     app->activeViewport()->camera(camera);
     app->activeViewport()->refresh();
 }
@@ -127,7 +127,7 @@ void zoomToFit() {
  */
 int howWeShouldHandleEvent(NSEvent* event) {
     // TODO handle only events to QTCanvas
-    
+
     if (event.type == NSEventTypeGesture) {
         if (event.modifierFlags != 0 || !app->activeViewport() || ![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
             return 0;
@@ -152,7 +152,7 @@ int howWeShouldHandleEvent(NSEvent* event) {
         }
         return 4;
     }
-    
+
     return 0;
 }
 
@@ -179,7 +179,7 @@ int howWeShouldHandleEvent(NSEvent* event) {
 - (void)nativeTrackpad {
     Method original = class_getInstanceMethod([self class], @selector(sendEvent:));
     Method swizzled = class_getInstanceMethod([self class], @selector(mySendEvent2:));
-    
+
     method_exchangeImplementations(original, swizzled);
 }
 @end
@@ -190,12 +190,12 @@ int howWeShouldHandleEvent(NSEvent* event) {
 extern "C" XI_EXPORT bool run(const char* context) {
     app = Application::get();
     if (!app) { return false; }
-    
+
     ui = app->userInterface();
     if (!ui) { return false; }
-    
+
     [NSApplication.sharedApplication nativeTrackpad];
-    
+
     return true;
 }
 
