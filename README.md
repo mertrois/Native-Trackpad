@@ -13,6 +13,7 @@
 
 ## Be Aware
 
+- In Fusion settings make sure to **turn off** `Use gesture-based view navigation`!
 - You can't no longer scroll in Data panel and other few places!  
   If you are stuck scrolling hold Command key!
 - Perspective camera can be very slow in certain situations!  
@@ -25,7 +26,6 @@
 - Unzip.
 - Go to: Tools → Add-ins → Add-ins → Click ➕.
 - Select unzipped folder.
-- In Fusion settings make sure to turn off `Use gesture-based view navigation`!
 
 ![manual install](res/install.png)
 
