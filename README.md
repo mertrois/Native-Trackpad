@@ -13,7 +13,8 @@
 
 ## Be Aware
 
-- In Fusion settings make sure to **turn off** `Use gesture-based view navigation`!
+- In Fusion settings make sure to **turn off** `Use gesture-based view navigation`!  
+  And restart the application.
 - You can't no longer scroll in Data panel and other few places!  
   If you are stuck scrolling hold Command key!
 - Perspective camera can be very slow in certain situations!  
