@@ -124,6 +124,7 @@ void zoomToFit() {
  * 2 = pan
  * 3 = zoom
  * 4 = zoom to fit
+ * 5 = orbit
  */
 int howWeShouldHandleEvent(NSEvent* event) {
     // TODO handle only events to QTCanvas
