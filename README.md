@@ -1,7 +1,5 @@
 <div align="center">
 
-**[Look at common issues first](https://github.com/luclefleur/Native-Trackpad/issues).**
-
 <img src="res/logo.png" width="256"/>
 
 # Native Trackpad Gestures<br/>for Autodesk Fusion 360
@@ -24,6 +22,7 @@ Replacing Fusion's gesture recognizer with macOS native recognizer.
 
 ## Links
 
+- **[Common Issues](https://github.com/luclefleur/Native-Trackpad/issues)**
 - [Todos](https://github.com/luclefleur/Native-Trackpad/search?q=todo).
 - [Issues](https://github.com/luclefleur/Native-Trackpad/issues).
 - [IdeaStation](https://forums.autodesk.com/t5/ideastation-request-a-feature-or/use-native-trackpad-gesture-recognition-on-macos/idi-p/7018667).
