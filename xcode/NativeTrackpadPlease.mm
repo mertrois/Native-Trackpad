@@ -173,6 +173,8 @@ int howWeShouldHandleEvent(NSEvent* event) {
         zoom(event.magnification);
     } else if(result == 4) {
         zoomToFit();
+    } else if(result == 5) {
+      orbit(event.scrollingDeltaX, event.scrollingDeltaY);
     }
 }
 
