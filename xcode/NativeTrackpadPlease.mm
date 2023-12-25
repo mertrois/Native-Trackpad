@@ -128,33 +128,26 @@ void zoomToFit() {
 int howWeShouldHandleEvent(NSEvent* event) {
     // TODO handle only events to QTCanvas
     
-    if (event.type != NSEventTypeScrollWheel && event.type != NSEventTypeMagnify && event.type != NSEventTypeGesture && event.type != NSEventTypeSmartMagnify) {
-        return 0;
-    }
-    if (![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
-        return 0;
-    }
-    
     if (event.type == NSEventTypeGesture) {
-        if (event.modifierFlags != 0 || !app->activeViewport()) {
+        if (event.modifierFlags != 0 || !app->activeViewport() || ![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
             return 0;
         }
         return 1;
     }
     if (event.type == NSEventTypeScrollWheel) {
-        if (event.modifierFlags != 0 || !app->activeViewport()) {
+        if (event.modifierFlags != 0 || !app->activeViewport() || ![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
             return 0;
         }
         return 2;
     }
     if (event.type == NSEventTypeMagnify) {
-        if (event.modifierFlags != 0 || !app->activeViewport()) {
+        if (event.modifierFlags != 0 || !app->activeViewport() || ![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
             return 0;
         }
         return 3;
     }
     if (event.type == NSEventTypeSmartMagnify) {
-        if (event.modifierFlags != 0 || !app->activeViewport()) {
+        if (event.modifierFlags != 0 || !app->activeViewport() || ![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
             return 0;
         }
         return 4;
