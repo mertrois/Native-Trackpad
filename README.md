@@ -6,7 +6,6 @@
 
 </div>
 
-## Features
 
 - Changes two finger pan gesture and adds inertia.
 - Changes pinch to zoom gesture.
