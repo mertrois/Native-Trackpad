@@ -13,11 +13,12 @@
 
 ## Be Aware
 
-- You can't no longer scroll in Data panel, in order to scroll hold Command key.
+- You can't no longer scroll in Data panel and other few places!  
+  If you are stucked scrolling hold Command key!
 - Navigation with perspective camera can be very slow in certain situations,
-  using orthographic camera fixes this issue.
+  using orthographic camera fixes this issue!  
   [Code that causes this issue](https://github.com/luclefleur/Native-Trackpad/blob/563fc1f69e3eb2f6dbee136feb9e3b52e439e907/NativeTrackpad.mm#L56).
-- [Common issues](https://github.com/luclefleur/Native-Trackpad/issues).
+- [Common issues](https://github.com/luclefleur/Native-Trackpad/issues)!
 
 ## Installation
 
