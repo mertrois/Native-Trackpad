@@ -130,16 +130,16 @@ int howWeShouldHandleEvent(NSEvent* event) {
     // TODO handle only events to QTCanvas
 
     if (event.type == NSEventTypeGesture) {
-        if (event.modifierFlags != 0 || !app->activeViewport() || ![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
+        if ((event.modifierFlags != 0 && ((event.modifierFlags & NSEventModifierFlagShift) == 0)) || !app->activeViewport() || ![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
             return 0;
         }
         return 1;
     }
     if (event.type == NSEventTypeScrollWheel) {
-        if (event.modifierFlags != 0 || !app->activeViewport() || ![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
+        if ((event.modifierFlags != 0 && ((event.modifierFlags & NSEventModifierFlagShift) == 0)) || !app->activeViewport() || ![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
             return 0;
         }
-        return 2;
+        return event.modifierFlags & NSEventModifierFlagShift ? 5 : 2;
     }
     if (event.type == NSEventTypeMagnify) {
         if (event.modifierFlags != 0 || !app->activeViewport() || ![event.window.title hasPrefix: @"Autodesk Fusion 360"]) {
