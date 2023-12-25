@@ -200,8 +200,17 @@ extern "C" XI_EXPORT bool run(const char* context) {
 }
 
 /**
- * Stop function not implemented
+ * Stop overriding events
  */
 extern "C" XI_EXPORT bool stop(const char* context) {
+    // this is the same as run since we just need to swap the sendEvent implementations back
+    app = Application::get();
+    if (!app) { return false; }
+
+    ui = app->userInterface();
+    if (!ui) { return false; }
+
+    [NSApplication.sharedApplication nativeTrackpad];
+
     return true;
 }
