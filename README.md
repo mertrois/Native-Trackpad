@@ -6,11 +6,11 @@
 
 </div>
 
+- **Pan** - slide with two fingers
+- **Zoom** - pinch with two fingers
+- **Rotate** - shift + slide with two fingers
+- **Zoom to fit** - double tap with two fingers
 
-- Changes two finger pan gesture and adds inertia.
-- Changes pinch to zoom gesture.
-- Rotate is shift + two finger.
-- Zoom to fit is double two finger tap.
 - You can't no longer scroll in Data panel, in order to scroll hold Command key.
 - Navigation with perspective camera can be very slow in certain situations,
   using orthographic camera fixes this issue.
