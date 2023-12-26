@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="res/logo.png" alt="Native Trackpad" width="256"/>
+<img src="res/logo.png" alt="Native Trackpad" width="128"/>
 
 # Native Trackpad<br/>Add-In for Autodesk Fusion 360
 
