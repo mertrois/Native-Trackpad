@@ -11,7 +11,7 @@
 - **Rotate** - shift + slide with two fingers
 - **Zoom to Fit** - double tap with two fingers
 
-## Be Aware
+## Important
 
 - In Fusion settings make sure to **turn off** `Use gesture-based view navigation`!  
   And restart the application.
