@@ -1,4 +1,4 @@
-<img src="res/logo.png" alt="Native Trackpad" width="128"/>
+<img src="res/logo.png" alt="Native Trackpad" align="right" width="256"/>
 
 # Native Trackpad
 
