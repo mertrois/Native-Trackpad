@@ -28,7 +28,7 @@
 - Go to: Tools → Add-ins → Add-ins → Click ➕.
 - Select unzipped folder.
 
-![manual install](res/install.png)
+<img src="res/install.png" alt="install" width="547"/>
 
 ## Se Also
 
