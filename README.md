@@ -2,6 +2,8 @@
 
 # Native Trackpad
 
+Fix trackpad panning in Fusion 360!
+
 Add-In for Autodesk Fusion 360.
 
 ## Gestures
