@@ -1,6 +1,6 @@
-build
-NativeTrackpadPlease.build
-project.xcworkspace
-xcuserdata
-EagerLinkingTBDs
-NativeTrackpadPlease.dylib
+/xcode/build
+/xcode/NativeTrackpadPlease.build
+/xcode/project.xcworkspace
+/xcode/xcuserdata
+/xcode/EagerLinkingTBDs
+/xcode/NativeTrackpadPlease.dylib
