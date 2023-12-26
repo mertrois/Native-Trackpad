@@ -1,10 +1,10 @@
-<div align="center">
-
 <img src="res/logo.png" alt="Native Trackpad" width="128"/>
 
-# Native Trackpad<br/>Add-In for Autodesk Fusion 360
+# Native Trackpad
 
-</div>
+Add-In for Autodesk Fusion 360.
+
+## Gestures
 
 - **Pan** - slide with two fingers
 - **Zoom** - pinch with two fingers
