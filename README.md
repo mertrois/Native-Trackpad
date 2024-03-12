@@ -25,7 +25,7 @@ Add-In for Autodesk Fusion 360.
 
 ## Install
 
-- [Download](https://github.com/luclefleur/Native-Trackpad/releases/download/0.15/NativeTrackpadPlease.zip) & unzip.
+- [Download](https://github.com/luclefleur/Native-Trackpad/releases/download/0.16/NativeTrackpadPlease.zip) & unzip.
 - Go to: Tools → Add-ins → Add-ins → Click ➕.
 - Select unzipped folder.
 
